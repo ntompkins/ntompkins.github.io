@@ -3,64 +3,128 @@
 	<head>
 		<title>Nathan Tompkins</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="css/style.min.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700|Quattrocento+Sans:400,400i,700" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<!--link rel="stylesheet" href="" /-->
+        	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i,700|Yellowtail" rel="stylesheet">
+       		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.2/css/brands.css" integrity="sha384-BKw0P+CQz9xmby+uplDwp82Py8x1xtYPK3ORn/ZSoe6Dk3ETP59WCDnX+fI1XCKK" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.2/css/fontawesome.css" integrity="sha384-iD1qS/uJjE9q9kecNUe9R4FRvcinAvTcPClTz7NI8RI5gUsJ+eaeJeblG1Ex0ieh" crossorigin="anonymous">
+        <style type="text/css">
+            /*
+            $green: #4ecdc4;
+            $red: #ff6b6b;
+            $blue: #556270;
+            $light-blue: #798899;
+            $dark-blue: #30363d;
+            $gold: #efd9aa;
+            */
+            body {
+                margin: 0;
+            }
+            .wrapper {
+                height: 100vh;
+                display: flex;
+                background-color: #798899;
+            }
+            #left {
+                float: left;
+                width: 80%;
+            }
+            #right {
+                float: right;
+                width: 20%;
+            }
+            #main { 
+                display: block; 
+                height: 100vh;
+            }
+            #port, #blog {
+                display: none;
+                height: 100vh;
+            }
+            .nav {
+                /* Navigation bar */
+                font-family: IBM Plex Mono, monospace;
+                background-color: #30363d;
+                height: 100vh;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                align-items: center;
+                text-align: center;
+            }
+            #links, #social, #copy {
+                width: 100%;
+            }
+            #links a {
+                display: block;
+                padding: 10% 0 10% 0;
+                color: #efd9aa;
+                background-color: inherit;
+                text-transform: uppercase;
+                text-decoration: none;
+                transition: ease all .3s;
+            }
+            #links a:hover {
+                color: #30363d;
+                background-color: #efd9aa;
+            }
+            #social a {
+                text-decoration: none;
+                color: #798899;
+            }
+            #social a:hover {
+                color: #556270;
+            }
+            #social a img {
+                max-width: 20%;
+            }
+            #copy {
+                font-size: .75em;
+                color: #798899;
+            }           
+        </style>
 	</head>
 	<body>
-		<!-- Wrapper -->
-			<div id="wrapper">
-				<!-- Intro -->
-				<section id="intro" class="wrapper fullscreen fade-up">
-					<div class="inner align-center">
-						<h1>Anguna</h1>
-						<p></p>
-						<ul class="actions">
-							<li><a href="#about-me" class="button big">About</a></li>
-						</ul>
-					</div>
-				</section>
-      <section id="about-me" class="wrapper fullscreen">
-					  <div class="inner">
-					    <h1 class="title">About Me</h1>
-					    <h2>Who are you?</h2>
-					    <p>
-					     My name is Nathan Tompkins. I'm a computer science student that loves graphic design. This is a simple website to house my stories and projects.
-					      </p>
-					      <p>When I'm not studying, I work with computers to help people that don't really know what they're doing. In my other spare time, you can find me studying graphic design and, occasionally, writing. If you want to work with me, you can contact me through the little social media that I have, or you can send me an email.</p>
-					    <h2>What is Anguna?</h2>
-					    <p>It's my name, Nathan, but each letter is <a target="_blank" href="http://rot13.com">replaced with the letter 13 spaces away</a>. I know, "How fascinating," you say to yourself, but my <a target="_blank" href="http://www.mess.be/inickgenwuname.php">Wu-Tang name</a> wasn't very good, so here we are.</p>
-					    <h2>Do you update this website?</h2>
-					    <p>Yes, often, just not in obvious ways; I tweak little, insignificant things all the time. I'm not a consistant writer or artist or anything, really. If I have hurt you in this, please write out your grievances and send them to me in an email that I will (maybe not) read.</p>
-				      <ul class=" align-center actions">
-				       <li><a target="_blank" href="https://instagram.com/nathan_tompkins" class="icon"><i class="fa fa-lg fa-instagram"></i></a></li>
-				       <li><a target="_blank" href="https://github.com/ntompkins" class="icon"><i class="fa fa-lg fa-github"></i></a></li>
-				       <!--<li><a href="#" class="icon"><i class="fa fa-lg fa-envelope"></i></a></li>-->
-				      </ul>
-					  </div>
-					</section>
-		<!-- Footer -->
-		<footer id="footer" class="wrapper">
-		<div class="inner">
-      <ul class="menu">
-	      <li style="color:#333">&copy; 2017 Nathan Tompkins. All rights reserved.</li>
-      </ul>
-    </div>
-		</footer>
-		<!-- Scripts -->
-				
-			<script src="https://use.fontawesome.com/d17888f6c1.js"></script>
-			<script>
-			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-			  ga('create', 'UA-69197324-2', 'auto');
-			  ga('send', 'pageview');
-			</script>
-    </div>
+        <div class="wrapper">
+            <div id="left">
+                <div id="main">
+                    Welcome!
+                </div>
+                <div id="port">
+                    Portfolio
+                </div>
+                <div id="blog">
+                    Blog
+                </div>
+            </div>
+            <div id="right">
+                <div class="nav">
+                    
+                    <div id="links">
+                        <a href="#main" onclick="show('main')"><img/></a>
+                        <a href="#port" onclick="show('port')">Portfolio</a>
+                        <a href="#blog" onclick="show('blog')">Blog</a>
+                    </div>
+                    
+                    <div id="social">
+                        <a href="#gh"><i class="fab fa-github 1em"></i></a>
+                        <a href="#li"><i class="fab fa-linkedin-in 1em"></i></a>
+                    </div>
+                    
+                    <div id="copy">
+                      &copy; 2019 Nathan Tompkins
+                    </div>
+                </div>
+            </div>
+        </div>
 	</body>
+    <script type="text/javascript">
+        var thisDiv = document.getElementById("main");
+        function show(divID) {
+            var div = document.getElementById(divID);
+            thisDiv.style.display = "none";
+            div.style.display = "block";
+            thisDiv = div;
+        }
+    </script>
 </html>
