@@ -1,11 +1,12 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <script>
-      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-      analytics.load("nwaaKcS0RtttipBPY4bCcXMrAYBk9QjY");
-      analytics.page();
-      }}();
+        !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+          analytics.load("nwaaKcS0RtttipBPY4bCcXMrAYBk9QjY");
+          analytics.page();
+          }}();
     </script>
     <title>Nathan Tompkins</title>
     <meta charset="utf-8" />
@@ -191,23 +192,21 @@
 
 <body>
     <div class="wrapper">
-      <div id="mobile-nav">
-        <a href="#main" onclick="show('main')">
-            <span>main </span>!</a>
-        <a href="#port" onclick="show('port')">
-            <span>port </span>:</a>
-        <a href="#blog" onclick="show('blog')">
-            <span>blog</span>.</a>
-      </div>
+        <div id="mobile-nav">
+            <a href="#main" onclick="show('main')">
+                <span>main </span>!</a>
+            <a href="#port" onclick="show('port')">
+                <span>port </span>:</a>
+            <a href="#blog" onclick="show('blog')">
+                <span>blog</span>.</a>
+        </div>
         <div id="left">
             <div class="sect" id="main">
                 <h1>Welcome!</h1>
                 <p><b>My name is Nathan and I love computer science.</b></p>
-                <p>I am currently interning in software R&D where I am working with <b>Go</b>, <b>AWS</b>, 
-                    and lots of <a href="https://segment.com/" target="_blank">analytics tools</a>.
+                <p>I am currently interning in software R&D where I am working with <b>Go</b>, <b>AWS</b>, and Segment + analytics.
                 </p>
-                <p>At school, I work as a <b>Production Assistant and Graphic Designer</b> part time, 
-                    and <b>Assistant Resident Director</b> for my residence hall full time.
+                <p>At school, I work as a <b>Production Assistant and Graphic Designer</b> part time, and <b>Assistant Resident Director</b> for my residence hall full time.
                 </p>
                 <p>Outside of CS, I am very passionate about graphic design and music.</p>
                 <p>This webpage serves as a portfolio for some of my personal and academic projects.</p>
@@ -226,22 +225,22 @@
         <div id="right">
             <div class="nav">
                 <div id="links">
-                    <a href="#main" onclick="show('main')" onclick="mixpanel.track('main click')">
+                    <a href="#main" onclick="show('main')" class="mixpanel-tracked">
                         <span>main </span>!</a>
-                    <a href="#port" onclick="show('port')" onclick="mixpanel.track('portfolio click')">
+                    <a href="#port" onclick="show('port')" class="mixpanel-tracked">
                         <span>port </span>:</a>
-                    <a href="#blog" onclick="show('blog')" onclick="mixpanel.track('blog click')">
+                    <a href="#blog" onclick="show('blog')" class="mixpanel-tracked">
                         <span>blog</span>.</a>
                 </div>
 
                 <div id="social">
-                    <a target="_blank" href="https://github.com/ntompkins" onclick="mixpanel.track('github click')">
+                    <a target="_blank" href="https://github.com/ntompkins" class="mixpanel-tracked">
                         <i class="fab fa-github-square fa-2x"></i>
                     </a>
-                    <a target="_blank" href="https://www.linkedin.com/in/nathan-tompkins-396957180" onclick="mixpanel.track('linkedin click')">
+                    <a target="_blank" href="https://www.linkedin.com/in/nathan-tompkins-396957180" class="mixpanel-tracked">
                         <i class="fab fa-linkedin fa-2x"></i>
                     </a>
-                    <a target="_blank" href="https://dribbble.com/ntompkins" onclick="mixpanel.track('dribbble click')">
+                    <a target="_blank" href="https://dribbble.com/ntompkins" class="mixpanel-tracked">
                         <i class="fab fa-dribbble-square fa-2x"></i>
                     </a>
                 </div>
@@ -254,6 +253,10 @@
     </div>
 </body>
 <script type="text/javascript">
+    mixpanel.track_links(".mixpanel-tracked", "Link clicked", function(ele) { 
+        return { type: $(ele).attr('type') } 
+    });
+    
     var thisDiv = document.getElementById("main");
         function show(divID) {
             var div = document.getElementById(divID);
