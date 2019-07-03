@@ -225,22 +225,22 @@
         <div id="right">
             <div class="nav">
                 <div id="links">
-                    <a href="#main" onclick="show('main')" class="mixpanel-tracked">
+                    <a href="#main" onclick="show('main'); mixpanel.track_links('btnMain','Main btn clicked')" id="btnMain">
                         <span>main </span>!</a>
-                    <a href="#port" onclick="show('port')" class="mixpanel-tracked">
+                    <a href="#port" onclick="show('port'); mixpanel.track_links('btnPort','Port btn clicked')" id="btnPort">
                         <span>port </span>:</a>
-                    <a href="#blog" onclick="show('blog')" class="mixpanel-tracked">
+                    <a href="#blog" onclick="show('blog'); mixpanel.track_links('btnBlog','Blog btn clicked')" id="btnBlog">
                         <span>blog</span>.</a>
                 </div>
 
                 <div id="social">
-                    <a target="_blank" href="https://github.com/ntompkins" class="mixpanel-tracked">
+                    <a target="_blank" href="https://github.com/ntompkins" onclick="mixpanel.track_links('githubLink','Github clicked')" id="githubLink">
                         <i class="fab fa-github-square fa-2x"></i>
                     </a>
-                    <a target="_blank" href="https://www.linkedin.com/in/nathan-tompkins-396957180" class="mixpanel-tracked">
+                    <a target="_blank" href="https://www.linkedin.com/in/nathan-tompkins-396957180" onclick="mixpanel.track_links('linkedinLink','LinkedIn clicked')" id="linkedinLink">
                         <i class="fab fa-linkedin fa-2x"></i>
                     </a>
-                    <a target="_blank" href="https://dribbble.com/ntompkins" class="mixpanel-tracked">
+                    <a target="_blank" href="https://dribbble.com/ntompkins" onclick="mixpanel.track_links('dribbbleLink','Dribbble clicked')" id="dribbbleLink">
                         <i class="fab fa-dribbble-square fa-2x"></i>
                     </a>
                 </div>
@@ -252,11 +252,8 @@
         </div>
     </div>
 </body>
-<script type="text/javascript">
-    mixpanel.track_links(".mixpanel-tracked", "Link clicked", function(ele) { 
-        return { type: $(ele).attr('type') } 
-    });
-    
+<script type="text/javascript">  
+    analytics.page();
     var thisDiv = document.getElementById("main");
         function show(divID) {
             var div = document.getElementById(divID);
