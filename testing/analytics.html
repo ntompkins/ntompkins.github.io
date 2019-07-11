@@ -15,6 +15,8 @@
       </style>
    </head>
    <body>
+      
+      <!-- Shopping cart options -->
       <div class="shoppingCart">
          <p>
             Cart: <span class="count" id="citem"></span>
@@ -26,6 +28,8 @@
             <a href="#logout" onclick="">Logoff</a>    
          </p>
       </div>
+      
+      <!-- Mall navigation links -->
       <div class="target">
          <h2>
             <a href="#mall-link" id="mall-categories">All Categories</a>
@@ -33,7 +37,10 @@
          <a href="#mall-link" id="mall-top-products">Explore Top Products</a> / 
          <a href="#mall-link" id="mall-new-products">Browse New Products</a>                     
       </div>
+      
+      <!-- Container for all products -->
       <div class="marketplace">
+         <!-- Individual product node that includes product ID -->
          <div class="product" id="0x0000">
             <p>
                <b>Widget</b>
@@ -46,15 +53,17 @@
             </p>
             <p>
                Helpful description of the widget to convince you to buy it. 
-               <a href="#product-expand" onclick="gtag('event','view_item')">See more</a>
+               <a href="#product-expand" onclick="gtag('event','view_item', {'event_label':'viewed '+this.parentNode.parentNode.id})">See more</a>
             </p>
          </div>
       </div>
       <div class="pagination">
-         <a href="#pageBack" onclick="">&lt;&lt;</a> 
+         <a href="#pageBack" onclick="">&lt;</a> 
          <span id="currentpage"></span> 
-         <a href="#pageNext" onclick="">&gt;&gt;</a>
+         <a href="#pageNext" onclick="">&gt;</a>
       </div>
+      
+      <!-- Search results feedback form | TODO: Add handler so that report goes somewhere -->
       <div class="hidden" id="feedbackCheck">
          <div id="prompt">
             <b>Did you find what you were looking for?</b>
@@ -91,6 +100,7 @@
          <a href="#close" onclick="">Close</a>
       </div>
       <script>
+         // Will customize this for when cart is not-empty and user leaves
          window.addEventListener('beforeunload', function() {
              	gtag('event','generate_lead');
          })
