@@ -1,13 +1,14 @@
+<!DOCTYPE html>
 <html>
    <head>
       <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ec.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-55039800-2"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55039800-2"></script>
       <script>
          window.dataLayer = window.dataLayer || [];
          function gtag(){dataLayer.push(arguments);}
          gtag('js', new Date());
          
-         gtag('config', 'UA-143186734-1');
+         gtag('config', 'UA-55039800-2');
       </script>
       <title>Analytics Marketplace</title>
       <style>
@@ -15,21 +16,16 @@
       </style>
    </head>
    <body>
-      
-      <!-- Shopping cart options -->
       <div class="shoppingCart">
          <p>
             Cart: <span class="count" id="citem"></span>
-            <a href="#view-cart" onclick="gtag('event','begin_checkout')">View Cart</a>
-            <a href="#purchase" onclick="gtag('event','purchase')">Purchase</a>
-            <input id=" mall_search" =""="" type="search">
-            <button type="submit" onclick="gtag('event','search')">Search</button>
-            <a href="#login" onclick="gtag('event','login')">Login</a> | 
+            <a href="#place-order" onclick="">Checkout</a>
+            <input id="mall_search" type="search"/>
+            <button type="submit" onclick="query(document.getElementById('mall_search').value)">Search</button>
+            <a href="#login" onclick="gtag('event','login',{'method':'manual'})">Login</a> | 
             <a href="#logout" onclick="">Logoff</a>    
          </p>
       </div>
-      
-      <!-- Mall navigation links -->
       <div class="target">
          <h2>
             <a href="#mall-link" id="mall-categories">All Categories</a>
@@ -37,23 +33,16 @@
          <a href="#mall-link" id="mall-top-products">Explore Top Products</a> / 
          <a href="#mall-link" id="mall-new-products">Browse New Products</a>                     
       </div>
-      
-      <!-- Container for all products -->
       <div class="marketplace">
-         <!-- Individual product node that includes product ID -->
          <div class="product" id="0x0000">
             <p>
                <b>Widget</b>
-               <a href="#add" onclick="gtag('event', 'add_to_cart', {
-                  'event_label': 'added '+this.parentNode.parentNode.id
-                  });">Add</a> or 
-               <a href="#remove" onclick="gtag('event', 'remove_from_cart', {
-                  'event_label': 'removed '+this.parentNode.parentNode.id
-                  });">Remove</a>
+               <a href="#" onclick="">Add</a> or 
+               <a href="#" onclick="">Remove</a>
             </p>
             <p>
                Helpful description of the widget to convince you to buy it. 
-               <a href="#product-expand" onclick="gtag('event','view_item', {'event_label':'viewed '+this.parentNode.parentNode.id})">See more</a>
+               <a href="#product-expand" onclick="">See more</a>
             </p>
          </div>
       </div>
@@ -62,8 +51,6 @@
          <span id="currentpage"></span> 
          <a href="#pageNext" onclick="">&gt;</a>
       </div>
-      
-      <!-- Search results feedback form | TODO: Add handler so that report goes somewhere -->
       <div class="hidden" id="feedbackCheck">
          <div id="prompt">
             <b>Did you find what you were looking for?</b>
@@ -93,17 +80,21 @@
                      Submit Feedback
                      </button>
                   </div>
-                  &lt;="" form=""&gt;
                </form>
             </span>
          </div>
          <a href="#close" onclick="">Close</a>
       </div>
       <script>
-         // Will customize this for when cart is not-empty and user leaves
-         window.addEventListener('beforeunload', function() {
-             	gtag('event','generate_lead');
-         })
-      </script>
+         function query(phrase) {
+             let terms = phrase.trim().split(" ");
+             let str = "";
+             for(let i = 0, len = terms.length - 1; i < len; i++) {
+                 str = str + terms[i] + '%20';
+             }
+             str = str + terms[terms.length - 1];
+             location.href = location.href.split('?')[0] + '?keywords=' + str;
+         }
+      </script>   
    </body>
 </html>
