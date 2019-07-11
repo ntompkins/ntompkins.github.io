@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55039800-2"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-143186734-1');
+        </script>
+        <title>Analytics Marketplace</title>
+        <style>
+            body{margin:0;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;}a{text-decoration:none;color:#007bff}a:hover{text-decoration:underline;color:#0056b3}ul{line-height:2em}.hidden{display:none}#feedbackCheck{position:fixed;left:0;bottom:0;width:100%;padding:10px 0 10px 0;background-color:#eee;text-align:center}#closeFeedbackCheck{float:right;text-align:right;color:red}#feedbackCheck button{background-color:#007bff;font-weight:700;padding:.5em 1em;border:none;color:#fff}#feedbackCheck button:hover{cursor:pointer;background-color:#0056b3}form{margin:0 auto;padding:1em}form div+div{margin-top:1em}.topbar a{float:left;margin:1% 2%}.shoppingCart{float:right;margin-right:5%}#citem{color:red}.target{text-align:center;padding:5%}.marketplace{text-align:center;margin:0 auto}.product{text-align:left;max-width:20%;margin:0 auto;padding:.5em 1em;display:inline-block;border:1px solid #ddd}.pagination{text-align:center}
+        </style>
+
+        
+    </head>
+    <body>
+        <div class="shoppingCart">
+            <p>
+                Cart: <span class="count" id="citem"></span>
+                <a href="#place-order" onclick="">Checkout</a>
+                <input id="mall_search" type="search"/>
+                <button type="submit" onclick="">Search</button>
+                <a href="#login" onclick="gtag('event','login',{'method':'manual'})">Login</a> | 
+                <a href="#logout" onclick="">Logoff</a>    
+            </p>
+        </div>
+        <div class="target">
+            <h2>
+                <a href="#mall-link" id="mall-categories">All Categories</a>
+            </h2> 
+            <a href="#mall-link" id="mall-top-products">Explore Top Products</a> / 
+            <a href="#mall-link" id="mall-new-products">Browse New Products</a>                     
+        </div>
+        <div class="marketplace">
+
+            <div class="product" id="0x0000">
+                <p>
+                    <b>Widget</b>
+                    <a href="#" onclick="">Add</a> or 
+                    <a href="#" onclick="">Remove</a>
+                </p>
+                <p>
+                    Helpful description of the widget to convince you to buy it. 
+                    <a href="#product-expand" onclick="">See more</a>
+                </p>
+            </div>
+                
+            </div>
+            <div class="pagination">
+                <a href="#pageBack" onclick=""><<</a> 
+                <span id="currentpage"></span> 
+                <a href="#pageNext" onclick="">>></a>
+            </div>
+            <div class="hidden" id="feedbackCheck">
+                <div id="prompt">
+                    <b>Did you find what you were looking for?</b>
+                    <button onclick="">
+                        Yes
+                    </button>
+                    <button onclick="">No</button>
+                </div>
+                <div id="response">
+                    <span class="hidden" id="goodNews">We're glad to hear it.</span>
+                    <span class="hidden" id="feedback">
+                        <form>
+                            <div>
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="user_name">
+                            </div>
+                            <div>
+                                <label for="mail">Email</label>
+                                <input type="email" id="mail" name="user_mail">
+                            </div>
+                            <div>
+                                <label for="msg">Issue</label>
+                                <textarea id="msg" name="user_message" placeholder="What you were looking for "></textarea>
+                            </div>
+                            <div class="button">
+                                <button type="submit">
+                                    Submit Feedback
+                                </button>
+                            </div>
+                        </form>
+                    </span>
+                </div>
+                <a href="#close" onclick="">Close</a>
+            </div>    
+    </body>
+</html>
