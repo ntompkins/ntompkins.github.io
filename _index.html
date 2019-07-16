@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ntompkins</title>
+        <link href="style.css" rel="stylesheet"/>
+        <!--
+            .NULL {
+color: #FCAA67; /* RAJAH */
+color: #333232; /* JET */
+color: #f7b2ad; /* MELON */
+color: #548687; /* WINTERGREEN */
+color: #473335; /* TAUPE */
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: "Zilla Slab",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+}
+nav {
+    color: #333232;
+    margin: 0 auto;
+    padding: 0 2%;
+    top: 0;
+    float: left;
+    position: -webkit-sticky;
+    position: sticky;
+    height: 100vh;
+    width: 25%;
+    background: #548687;
+}
+nav img {
+    margin: 5% auto 5% auto;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+nav h1 a {
+    color: #FCAA67;
+}
+nav h1 a:hover {
+    cursor: pointer;
+}
+nav p {
+    margin-top: -1em;
+}
+main input {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #FCAA67;
+    font-family: "Zilla Slab", sans-serif;
+    background-color: #fff;
+    color: #FCAA67;
+    font-size: 1.4em;
+    height: 3em;
+    padding: 1em;
+    top: 0;
+    left: 26%;
+    width: 100%;
+    font-style: italic;
+}
+::placeholder {
+    color: #FCAA67;
+    transition: ease all .3s;
+}
+main input:focus {
+    outline: none;
+    background-color: #FCAA67;
+    color: #fff;      
+}
+.links {
+    text-align: center;
+    list-style: none;
+    padding-left: 0;
+    min-height: 20vh;
+    font-weight: 700;
+}
+.links a {
+    display: block;
+    margin: 0 auto -1px 0;
+    padding: 1em 0;
+    text-decoration: none;
+    color: #FCAA67; 
+    transition: ease all .3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid #FCAA67;
+}
+.links a:first-child {
+    border-radius: 1em 1em 0 0;
+}
+.links a:last-child {
+    border-radius: 0 0 1em 1em;
+}
+.links a:hover {
+    background-color: #FCAA67;
+    color: #548687;
+}
+.links a li {
+    padding: 10px 0;
+}
+.social {
+    display: flex;
+    justify-content: space-between;
+}
+.social a {
+    color: #F7B2AD;
+    text-decoration: none;
+}
+#copy {
+    text-align: center;
+    font-style: italic;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+main article {
+    line-height: 1.6em;
+    font-size: 1.1rem;
+    margin: 0 auto;
+    padding: 2em;
+}
+main article h1 {
+    color: #333232;
+    border-bottom: 2px solid #548687;
+    padding-bottom: 10px;
+}
+main article h1 time {
+    color: #473335;
+}
+main article p {
+    max-width: 50rem;
+    flex-wrap: auto;
+    color: #333232;
+}
+main article p a {
+    color: #473335;
+}
+
+        -->
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,400i,700&display=swap" rel="stylesheet">
+            <script defer src="lunr.min.js"></script>
+    </head>
+    <body>
+        <!--- sidebar -->
+        <nav>
+            <img src="monitor.jpg"/>
+            <h1>My name is <a id="myName" onclick="newName()">Nathan</a></h1>
+            <p id="andI">and I love computers, design, and writing.</p>
+            <ul class="links">
+                <a href="#biography"><li>Biography</li></a>
+                <a href="#projects"><li>Projects</li></a>
+                <a href="#portfolio"><li>Portfolio</li></a>
+                <a href="#blog"><li>Blog</li></a>
+            </ul>
+            <div class="social">
+                <a href="#li">Linkedin</a>
+                <a href="#gh">GitHub</a>
+                <a href="#dr">Dribbble</a>
+                <a href="#sp">Spotify</a>
+            </div>
+            <br>
+            <div id="copy">Property of Nathan Tompkins &bullet; 2019</div>
+        </nav>
+
+        <!-- content -->
+        <main>
+            <input type="search" placeholder="Search..."/>
+            <article id="biography">
+                <h1> <time datetime="07-09-2019">07.09.2019</time> &bullet; Biography</h1>
+                <p>I've been working with computers for a long time, and my interest in them
+                    came about mostly through osmosis; I grew up around them and learned how
+                    to fix them by breaking them. I am currently interning in software R&D 
+                    where I am working with Go, AWS, and Segment + analytics. At school, I 
+                    work as a Production Assistant and Graphic Designer part time, and 
+                    Assistant Resident Director for my residence hall full time. Outside of 
+                    CS, I am very passionate about graphic design and music.</p>
+            </article>
+            <article id="projects">
+                    <h1> <time datetime="07-09-2019">07.09.2019</time> &bullet; Projects</h1>
+                    <p>I've been working with computers for a long time, and my interest in them
+                        came about mostly through osmosis; I grew up around them and learned how
+                        to fix them by breaking them. <a href="#">Link to everything you wanted.</a></p>
+            </article>
+            <article id="portfolio">
+                    <h1> <time datetime="07-09-2019">07.09.2019</time> &bullet; Portfolio</h1>
+                    <p>I've been working with computers for a long time, and my interest in them
+                        came about mostly through osmosis; I grew up around them and learned how
+                        to fix them by breaking them. <a href="#">Link to everything you wanted.</a></p>
+            </article>
+            <article id="blog">
+                    <h1> <time datetime="07-09-2019">07.09.2019</time> &bullet; Blog</h1>
+                    <p>I've been working with computers for a long time, and my interest in them
+                        came about mostly through osmosis; I grew up around them and learned how
+                        to fix them by breaking them. <a href="#">Link to everything you wanted.</a></p>
+            </article>
+            <article>
+                    <h1> <time datetime="07-09-2019">07.09.2019</time> &bullet; Introduction</h1>
+                    <p>I've been working with computers for a long time, and my interest in them
+                        came about mostly through osmosis; I grew up around them and learned how
+                        to fix them by breaking them. <a href="#">Link to everything you wanted.</a></p>
+            </article>
+            <article>
+                    <h1> <time datetime="07-09-2019">07.09.2019</time> &bullet; Introduction</h1>
+                    <p>I've been working with computers for a long time, and my interest in them
+                        came about mostly through osmosis; I grew up around them and learned how
+                        to fix them by breaking them. <a href="#">Link to everything you wanted.</a></p>
+            </article>
+        </main>
+        <script>
+        var nameList = ["Nathan","Dollop","Shoot, Bubba!","Neufchatel","Samir","Anguna","Babaganoush","Habeeb"];
+        var biosList = [
+            "and I love computers, design, and writing.",
+            "and I am a proud member of Dorm 41.",
+            "and I think summer camp is the best.",
+            "and I am lactose intolerant.",
+            "and I'm a little Egyptian.",
+            "and wordplay is hard.", 
+            'and I think eggplant is pretty good.',
+            'and we all go through phases.',
+        ];
+        var myName = document.getElementById('myName');
+        var andI = document.getElementById('andI');
+        function newName() {
+            var i = (Math.random() * nameList.length ) | 0;
+            myName.innerText = nameList[i];
+            andI.innerText = biosList[i];
+        } 
+        </script>
+    </body>
+</html>
