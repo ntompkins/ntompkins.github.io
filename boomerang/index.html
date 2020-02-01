@@ -1,40 +1,91 @@
 <!doctype html>
 <html>
   <head>
-    <title>Boomerang</title>
+    <title>Boomerang Flight Project</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&display=swap" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet"/>
   </head>
   
   <body>
-	<h1>Boomerang</h1>
-	
-	<h3>Plane Model</h3>
-	<input>
-	
-	<h3>Lift Coefficient</h3>
-	<input>
-	
-	<h3>Lattitude</h3>
-	<input>
-	
-	<h3>Longitude</h3>
-	<input>
-	
-	<h3>Drag Coefficient</h3>
-	<input>
-	
-	<h3>Takeoff Speed</h3>
-	<input>
-	
-	<h3>Temperature</h3>
-	<input>
-	
-	<h3>Air Density</h3>
-	<input>
+	<div class="navbar">
+		<a id="title" href="/index.html">Boomerang</a>
+		<a id="settings" href="#settings">Settings</a>
+	</div>
+	<div class="table">
 
-	<h3>Roll Rate</h3>
-	<input>
+		<!-- Plane Information -->
+		<div class="table-block">
+			<div class="table-block-header">Plane Model</div>
+			<select id="attr-plane-model">
+				<option value="cessna-172">
+					Cessna 172
+				</option>
+				<option value="eclipse-550">
+					Eclipse 550
+				</option>
+				<option value="icon-a5">
+					Icon A5
+				</option>
+			</select>
+		</div>
+
+		<!-- Position Information -->
+		<div class="table-block">
+			<div class="table-block-header">
+				Lattitude
+			</div>
+			<input id="attr-lat">
+
+			<div class="table-block-header">
+				Longitude
+			</div>
+			<input id="attr-long">
+			<br>
+			<a href="#coordinate-lookup">Coordinate Lookup</a>
+		</div>
+
+		<!-- Takeoff Information -->
+		<div class="table-block">
+			<div class="table-block-header">
+				Drag Coefficient
+			</div>
+			<input id="attr-drag">
+
+			<div class="table-block-header">
+				Takeoff Speed
+			</div>
+			<input id="attr-takeoff-speed">
+			
+			<div class="table-block-header">
+				Temperature
+			</div>
+			<input id="attr-temp">
+
+			<div class="table-block-header">
+				Air Density
+			</div>
+			<input id="attr-density">
+			<br>
+			<a href="#weather-lookup">Weather Lookup</a>
+		</div>
+		<input onclick="formSubmit()" type="button" value="Submit">
+	</div>
+	<script type="text/javascript">
+	function formSubmit() {
+		// Pull form data
+		var model = document.getElementById("attr-plane-model").value;
+		var lat = document.getElementById("attr-lat").value;
+		var long = document.getElementById("attr-long").value;
+		var drag = document.getElementById("attr-drag").value;
+		var takeoff = document.getElementById("attr-takeoff-speed").value;
+		var temp = document.getElementById("attr-temp").value;
+		var density = document.getElementById("attr-density").value;
+
+		// Concat JSON and return string
+		console.log(`'attributes':{'model':'${model}',\r\n'lat':'${lat}',\r\n'long':'${long}',\r\n'drag':'${drag}',\r\n'takeoff':'${takeoff}',\r\n'temp':'${temp}',\r\n'density':'${density}'}`);
+	}
+	</script>
   </body>
 </html>
