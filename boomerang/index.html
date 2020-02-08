@@ -70,22 +70,39 @@
 			<br>
 			<a href="#weather-lookup">Weather Lookup</a>
 		</div>
+		<div class="table-block">
+			<div class="table-block-header">
+				<button onclick="render()">Redraw</button>
+			</div>
+			<div id="drawing">
+
+			</div>
+		</div>
 		<input onclick="formSubmit()" type="button" value="Submit">
 	</div>
+	<script src="js/svg.min.js"></script>
 	<script type="text/javascript">
-	function formSubmit() {
-		// Pull form data
-		var model = document.getElementById("attr-plane-model").value;
-		var lat = document.getElementById("attr-lat").value;
-		var long = document.getElementById("attr-long").value;
-		var drag = document.getElementById("attr-drag").value;
-		var takeoff = document.getElementById("attr-takeoff-speed").value;
-		var temp = document.getElementById("attr-temp").value;
-		var density = document.getElementById("attr-density").value;
 
-		// Concat JSON and return string
-		console.log(`'attributes':{'model':'${model}',\r\n'lat':'${lat}',\r\n'long':'${long}',\r\n'drag':'${drag}',\r\n'takeoff':'${takeoff}',\r\n'temp':'${temp}',\r\n'density':'${density}'}`);
-	}
+		// Draw random shapes
+		function render() {
+			var draw = SVG().addTo("#drawing").size(100,100);
+			var shape = draw.polygon('0,0 100,50 50,100').attr({fill:'#f06'})
+		}
+
+		function formSubmit() {
+			// Pull form data
+			var model = document.getElementById("attr-plane-model").value;
+			var lat = document.getElementById("attr-lat").value;
+			var long = document.getElementById("attr-long").value;
+			var drag = document.getElementById("attr-drag").value;
+			var takeoff = document.getElementById("attr-takeoff-speed").value;
+			var temp = document.getElementById("attr-temp").value;
+			var density = document.getElementById("attr-density").value;
+
+			// Concat JSON and return string
+			console.log(`'attributes':{'model':'${model}',\r\n'lat':'${lat}',\r\n'long':'${long}',\r\n'drag':'${drag}',\r\n'takeoff':'${takeoff}',\r\n'temp':'${temp}',\r\n'density':'${density}'}`);
+
+		}
 	</script>
   </body>
 </html>
