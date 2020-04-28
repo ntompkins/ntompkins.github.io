@@ -6,18 +6,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&display=swap" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet"/>
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
   </head>
   
   <body>
 	<div class="navbar">
-		<a id="title" href="/index.html">Boomerang</a>
+		<a id="title" href="index.html">Boomerang</a>
 		<a id="settings" href="#settings">Settings</a>
 	</div>
 	<div class="table">
 
 		<!-- Plane Information -->
 		<div class="table-block">
-			<div class="table-block-header">Plane Model</div>
+			<div class="table-block-header">PLANE MODEL</div>
 			<select id="attr-plane-model">
 				<option value="cessna-172">
 					Cessna 172
@@ -31,51 +32,52 @@
 			</select>
 		</div>
 
-		<!-- Position Information -->
-		<div class="table-block">
-			<div class="table-block-header">
-				Lattitude
-			</div>
-			<input id="attr-lat">
-
-			<div class="table-block-header">
-				Longitude
-			</div>
-			<input id="attr-long">
-			<br>
-			<a href="#coordinate-lookup">Coordinate Lookup</a>
-		</div>
-
 		<!-- Takeoff Information -->
 		<div class="table-block">
 			<div class="table-block-header">
-				Drag Coefficient
+				GROUND RUN
 			</div>
-			<input id="attr-drag">
+			<input id="attr-ground-run" placeholder="Meters">
 
 			<div class="table-block-header">
-				Takeoff Speed
+				TAKEOFF SPEED
 			</div>
-			<input id="attr-takeoff-speed">
-			
-			<div class="table-block-header">
-				Temperature
-			</div>
-			<input id="attr-temp">
+			<input id="attr-takeoff-speed" placeholder="km/h">
 
 			<div class="table-block-header">
-				Air Density
+				GLIDE RATIO
 			</div>
-			<input id="attr-density">
-			<br>
-			<a href="#weather-lookup">Weather Lookup</a>
+			<input id="attr-glide-ratio" placeholder="65">
 		</div>
+
+		<!-- Position Information -->
+		<div class="table-block">
+			<div class="table-block-header">
+				IATA CODE
+			</div>
+			<input id="attr-iata" placeholder="DFW">
+			<button href="#coordinate-lookup">IATA Lookup</button>
+			<button href="#manual-coordiantes">Enter coordinates manually</button>
+		</div>
+
+		<div class="table-block">
+			<div class="table-block-header">
+				TEMPERATURE
+			</div>
+			<input id="attr-temp" placeholder="Celsius">
+			<button href="#weather-lookup">Weather Lookup</button>
+
+			<div class="table-block-header">
+				AIR PRESSURE
+			</div>
+			<input id="attr-air-pressure" placeholder="inHg">
+		</div>
+
 		<div class="table-block">
 			<div class="table-block-header">
 				<button onclick="render()">Redraw</button>
 			</div>
 			<div id="drawing">
-
 			</div>
 		</div>
 		<input onclick="formSubmit()" type="button" value="Submit">
@@ -92,12 +94,12 @@
 		function formSubmit() {
 			// Pull form data
 			var model = document.getElementById("attr-plane-model").value;
-			var lat = document.getElementById("attr-lat").value;
-			var long = document.getElementById("attr-long").value;
-			var drag = document.getElementById("attr-drag").value;
-			var takeoff = document.getElementById("attr-takeoff-speed").value;
+			var ground_run = document.getElementById("attr-ground-run").value;
+			var speed = document.getElementById("attr-takeoff-speed").value;
+			var glide_ratio = document.getElementById("attr-glide-ratio").value;
+			var iata = document.getElementById("attr-iata").value;
 			var temp = document.getElementById("attr-temp").value;
-			var density = document.getElementById("attr-density").value;
+			var pressure = document.getElementById("attr-air-pressure").value;
 
 			// Concat JSON and return string
 			console.log(`'attributes':{'model':'${model}',\r\n'lat':'${lat}',\r\n'long':'${long}',\r\n'drag':'${drag}',\r\n'takeoff':'${takeoff}',\r\n'temp':'${temp}',\r\n'density':'${density}'}`);
