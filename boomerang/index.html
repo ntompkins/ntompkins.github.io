@@ -10,77 +10,102 @@
 	</head>
   
   <body>
-	<div class="navbar">
-		<a id="title" href="index.html">Boomerang</a>
-		<a id="settings" href="#settings">Settings</a>
-	</div>
-	<div class="table">
-
-		<!-- Plane Information -->
-		<div class="table-block">
-			<div class="table-block-header">PLANE MODEL</div>
-			<select id="attr-plane-model">
-				<option value="cessna-172">
-					Cessna 172
-				</option>
-				<option value="eclipse-550">
-					Eclipse 550
-				</option>
-				<option value="icon-a5">
-					Icon A5
-				</option>
-			</select>
+	<nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+		<div class="flex items-center flex-shrink-0 text-white mr-6">
+			<span class="font-semibold text-xl tracking-tight"> Boomerang</span>
 		</div>
-
-		<!-- Takeoff Information -->
-		<div class="table-block">
-			<div class="table-block-header">
-				GROUND RUN
-			</div>
-			<input id="attr-ground-run" placeholder="Meters">
-
-			<div class="table-block-header">
-				TAKEOFF SPEED
-			</div>
-			<input id="attr-takeoff-speed" placeholder="km/h">
-
-			<div class="table-block-header">
-				GLIDE RATIO
-			</div>
-			<input id="attr-glide-ratio" placeholder="65">
+		<div class="block">
+			<button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+				Settings
+			</button>
 		</div>
+	</nav>
 
-		<!-- Position Information -->
-		<div class="table-block">
-			<div class="table-block-header">
-				IATA CODE
-			</div>
-			<input id="attr-iata" placeholder="DFW">
-			<button href="#coordinate-lookup">IATA Lookup</button>
-			<button href="#manual-coordiantes">Enter coordinates manually</button>
-		</div>
+	<div class="flex items-center justify-center">
+		<div class="w-full max-w-lg">
+			<form class="bg-white shadow-md rounded px-8 pb-8 mb-4">
+				<div class="mb-4">
+					<label class="block text-gray-700 text-sm font-bold mb-2">
+						PLANE MODEL
+					</label>
+					<select id="attr-plane-model" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+						<option value="cessna-172">
+							Cessna 172
+						</option>
+						<option value="eclipse-550">
+							Eclipse 550
+						</option>
+						<option value="icon-a5">
+							Icon A5
+						</option>
+					</select>
+				</div>
+				
+				<div class="mb-4">
+					<button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
+						MANUAL ENTRY
+					</button>
+				</div>
+	
+				<div class="mb-4">
+					<label class="block text-gray-700 text-sm font-bold mb-2">
+						GROUND RUN
+					</label>
+					<input id="attr-ground-run" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Meters">
+				</div>
+	
+				<div class="mb-4">
+					<label class="block text-gray-700 text-sm font-bold mb-2">
+						TAKEOFF SPEED
+					</label>
+					<input id="attr-takeoff-speed" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="km/h">
+				</div>
+	
+				<div class="mb-4">
+					<label class="block text-gray-700 text-sm font-bold mb-2">
+						GLIDE RATIO
+					</label>
+					<input id="attr-glide-ratio" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="65">
+				</div>
+	
+				<div class="mb-4">
+					<label class="block text-gray-700 text-sm font-bold mb-2">
+						IATA CODE
+					</label>
+					<input id="attr-iata" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="DFW">
+				</div>
 
-		<div class="table-block">
-			<div class="table-block-header">
-				TEMPERATURE
-			</div>
-			<input id="attr-temp" placeholder="Celsius">
-			<button href="#weather-lookup">Weather Lookup</button>
+				<div class="mb-4">
+					<button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">
+						IATA LOOKUP
+					</button>
+				</div>
+			
+				<div class="mb-4">
+					<label class="block text-gray-700 text-sm font-bold mb-2">
+						TEMPERATURE
+					</label>
+					<input id="attr-temp" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Celsius">
+				</div>
+	
+				<div class="mb-4">
+					<label class="block text-gray-700 text-sm font-bold mb-2">
+						AIR PRESSURE
+					</label>
+					<input id="attr-air-pressure" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="mmHg">
+				</div>
 
-			<div class="table-block-header">
-				AIR PRESSURE
-			</div>
-			<input id="attr-air-pressure" placeholder="inHg">
-		</div>
-
-		<div class="table-block">
-			<div class="table-block-header">
-				<button onclick="render()">Redraw</button>
-			</div>
-			<div id="drawing">
-			</div>
-		</div>
-		<input onclick="formSubmit()" type="button" value="Submit">
+				<div class="mb-4">
+					<button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">
+						WEATHER
+					</button>
+				</div>
+	
+				<button onclick="formSubmit()" class = "bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type = "button">
+					Continue
+				</button>
+			</form>	
+		</div>		
 	</div>
 	<script src="js/svg.min.js"></script>
 	<script type="text/javascript">
