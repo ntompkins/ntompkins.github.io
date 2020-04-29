@@ -1,3 +1,18 @@
+/* Background colors */
+.bg-black       { background-color: #222222; }
+.bg-platinum    { background-color: #e6e8e6; }
+.bg-navy        { background-color: #4b4e6d; }
+.bg-turquoise   { background-color: #84dcc6; }
+.bg-baby-blue   { background-color: #95a3b3; }
+.bg-turquoise-rich  { background-color: #38c6a2; }
+
+/* Font colors */
+.text-black     { color: #222222; }
+.txt-platinum   { color: #e6e8e6; }
+.txt-navy       { color: #4b4e6d; }
+.txt-turqoise   { color: #84dcc6; }
+.txt-baby-blue  { color: #95a3b3; }
+
 /* html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,

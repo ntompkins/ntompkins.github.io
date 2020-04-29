@@ -10,9 +10,9 @@
 	</head>
   
   <body>
-	<nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-		<div class="flex items-center flex-shrink-0 text-white mr-6">
-			<span class="font-semibold text-xl tracking-tight"> Boomerang</span>
+	<nav class="flex items-center justify-between flex-wrap bg-navy p-6">
+		<div class="flex items-center flex-shrink-0 text-white mr-6 ">
+				<img class="object-contain" src="img/web.bmrng.png">
 		</div>
 		<div class="block">
 			<button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
@@ -23,7 +23,7 @@
 
 	<div class="flex items-center justify-center">
 		<div class="w-full max-w-lg">
-			<form class="bg-white shadow-md rounded px-8 pb-8 mb-4">
+			<form class="bg-white shadow-md rounded px-8 pb-8 mb-6">
 				<div class="mb-4">
 					<label class="block text-gray-700 text-sm font-bold mb-2">
 						PLANE MODEL
@@ -51,21 +51,21 @@
 					<label class="block text-gray-700 text-sm font-bold mb-2">
 						GROUND RUN
 					</label>
-					<input id="attr-ground-run" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Meters">
+					<input id="attr-ground-run" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Feet">
 				</div>
 	
 				<div class="mb-4">
 					<label class="block text-gray-700 text-sm font-bold mb-2">
 						TAKEOFF SPEED
 					</label>
-					<input id="attr-takeoff-speed" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="km/h">
+					<input id="attr-takeoff-speed" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Knots">
 				</div>
 	
 				<div class="mb-4">
 					<label class="block text-gray-700 text-sm font-bold mb-2">
 						GLIDE RATIO
 					</label>
-					<input id="attr-glide-ratio" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="65">
+					<input id="attr-glide-ratio" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="9/1">
 				</div>
 	
 				<div class="mb-4">
@@ -85,14 +85,14 @@
 					<label class="block text-gray-700 text-sm font-bold mb-2">
 						TEMPERATURE
 					</label>
-					<input id="attr-temp" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Celsius">
+					<input id="attr-temp" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Fahrenheit">
 				</div>
 	
 				<div class="mb-4">
 					<label class="block text-gray-700 text-sm font-bold mb-2">
 						AIR PRESSURE
 					</label>
-					<input id="attr-air-pressure" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="mmHg">
+					<input id="attr-air-pressure" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="inHg">
 				</div>
 
 				<div class="mb-4">
@@ -101,7 +101,7 @@
 					</button>
 				</div>
 	
-				<button onclick="formSubmit()" class = "bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type = "button">
+				<button onclick="formSubmit()" class = "bg-turquoise-rich hover:bg-turquoise text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type = "button">
 					Continue
 				</button>
 			</form>	
