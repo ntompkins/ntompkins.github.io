@@ -1,250 +1,53 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
-    <script>
-        !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-          analytics.load("nwaaKcS0RtttipBPY4bCcXMrAYBk9QjY");
-          analytics.page();
-          }}();
-    </script>
-    <title>Nathan Tompkins</title>
+    <title>ntompkins.</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--link rel="stylesheet" href="" /-->
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i,700|Yellowtail" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
     <style type="text/css">
-        /*
-            $green: #4ecdc4;
-            $red: #ff6b6b;
-            $blue: #556270;
-            $light-blue: #798899;
-            $dark-blue: #30363d;
-            $gold: #efd9aa;
-            */
-            body {
-              margin: 0;
-            }
-
-            .wrapper {
-              height: 100vh;
-              display: flex;
-            }
-
-            #left {
-              float: left;
-              width: 80%;
-              font-family: IBM Plex Mono,monospace;
-              color: #efd9aa;
-              line-height: 1.3em;
-              background-color: #30363d;
-              max-height: 100vh;
-              overflow: auto;
-            }
-
-            #right {
-              float: right;
-              width: 20%;
-              background-color: #efd9aa;
-            }
-
-            #mobile-nav {
-              display: none;
-            }
-
-            @media screen and (max-width: 700px) {
-              #left {
-                width:100%;
-                padding-top: 10%;
-              }
-              #right {
-                display: none;
-              }
-              #mobile-nav {
-                display: block;
-                position: fixed;
-                width: 100%;
-                background-color: #efd9aa;
-                font-family: "IBM Plex Mono", monospace;
-                margin: 0;
-                padding: 5%;
-                text-align: left;
-              }
-              #mobile-nav a {
-                text-decoration: none;
-                color: #30363d;
-                padding: 5% 5%;
-                margin: 0 -1%;
-                transition: .3s ease all;
-              }
-              #mobile-nav a:hover {
-                color: #ff8da1;
-                background-color: #30363d;
-              }
-            }
-
-            #main, #port, #blog {
-              display: block;
-              height: auto;
-              max-height: 100vh;
-              max-width: 40em;
-              margin: 8% auto;
-              padding: 2% 10%;
-            }
-
-            .sect h1 {
-              font-family: "Yellowtail", "Sego UI", "HelveticaNeue", Helvetica, Arial, sans-serif;
-              font-weight: 400;
-              font-size: 4em;
-              color: #ff8da1;
-              text-shadow: 0 0 10px #ff6b6b;
-            }
-
-            .sect p {
-              font-size: .9em;
-            }
-            .sect a {
-                text-decoration: none;
-                color: #ff8da1;
-                border-bottom: 1px solid transparent;
-                transition: ease all .3s;
-                font-style: italic;
-            }
-            .sect a:hover {
-                border-bottom: 1px solid #ff8da1;
-            }
-
-            #port, #blog {
-              display: none;
-            }
-
-            .nav {
-              font-family: "IBM Plex Mono", monospace;
-              height: 100vh;
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: space-evenly;
-              align-items: center;
-              text-align: center;
-            }
-
-            #links, #social, #copy {
-              width: 100%;
-            }
-
-            #links a {
-              display: block;
-              padding: 10%;
-              color: #30363d;
-              background-color: inherit;
-              text-decoration: none;
-              transition: ease all .3s;
-              text-align: right;
-            }
-
-            .nav #links span {
-                text-transform: lowercase;
-                font-style: italic;
-                display: inline;
-                float: left;
-                color: #30363d;
-                transition: ease all .3s;
-                margin: 0;
-                padding-left: 5%;
-                padding-right: 5%;
-            }
-
-            #links a:hover {
-              color: #ff8da1;
-              background-color: #30363d;
-            }
-
-            #links a:hover > span {
-                float: left;
-                color: #ff8da1;
-                padding-left: 10%;
-                padding-right: 0%;
-            }
-
-            #social a {
-              text-decoration: none;
-              color: #30363d;
-              transition: .3s ease all;
-            }
-
-            #social a:hover {
-              color: #ff8da1;
-            }
-
-            #social a img {
-              max-width: 20%;
-            }
-
-            #copy {
-              font-size: .75em;
-              color: #30363d;
-              font-style: italic;
-              margin: 3% 5%;
-            }
+       body{margin:0}.wrapper{height:100vh;display:flex}#left{float:left;width:80%;font-family:IBM Plex Mono,monospace;color:#30363d;line-height:1.3em;background-color:#efd9aa;max-height:100vh;overflow:auto}#right{float:right;width:20%;background-color:#efd9aa}#mobile-nav{display:none}@media screen and (max-width:700px){#left{width:100%;padding-top:10%}#right{display:none}#mobile-nav{display:block;position:fixed;width:100%;background-color:#efd9aa;font-family:IBM Plex Mono,monospace;margin:0;padding:5%;text-align:left}#mobile-nav a{text-decoration:none;color:#30363d;padding:5% 5%;margin:0 -1%;transition:.3s ease all}#mobile-nav a:hover{color:#ff8da1;background-color:#30363d}}#main,#port,#blog{display:block;height:auto;max-height:100vh;max-width:60em;margin:8% auto;padding:2% 10%}.sect h1{font-family:IBM Plex Mono,monospace;font-weight:700;font-size:2em;color:#ff8da1;line-height:1em}.sect p{font-size:1em}.sect a{text-decoration:none;color:#ff8da1;border-bottom:1px solid transparent;transition:ease all .1s;font-style:italic}.sect a:hover{border-bottom:1px solid #ff8da1}#port,#blog{display:none}.nav{font-family:IBM Plex Mono,monospace;height:100vh;display:flex;flex-wrap:wrap;justify-content:space-evenly;align-items:center;text-align:center}#links,#social,#copy{width:100%}#links a{display:block;padding:10%;color:#30363d;background-color:inherit;text-decoration:none;transition:ease all .3s;text-align:right;border-radius:100px 0 0 100px;font-weight:700}.nav #links span{text-transform:lowercase;font-style:italic;display:inline;float:left;color:#30363d;transition:ease all .3s;margin:0;padding-left:5%;padding-right:5%}#links a:hover{color:#ff8da1;background-color:#30363d}#links a:hover>span{float:left;color:#ff8da1;padding-left:10%;padding-right:0}#social a{text-decoration:none;color:#30363d;transition:.1s ease all}#social a:hover{color:#ff8da1}#social a img{max-width:20%}#copy{font-size:.75em;color:#30363d;font-style:italic;margin:3% 5%}
     </style>
 </head>
 
 <body>
     <div class="wrapper">
         <div id="mobile-nav">
-            <a href="#main" onclick="show('main')">
-                <span>main </span>!</a>
-            <a href="#port" onclick="show('port')">
-                <span>port </span>:</a>
             <a href="#blog" onclick="show('blog')">
-                <span>blog</span>.</a>
+            <span>blog</span>.</a>
         </div>
         <div id="left">
             <div class="sect" id="main">
-                <h1>Welcome!</h1>
-                <p><b>My name is Nathan and I love computer science.</b></p>
-                <p>I am currently interning in software R&D where I am working with <b>Go</b>, <b>AWS</b>, and Segment + analytics.
-                </p>
-                <p>At school, I work as a <b>Production Assistant and Graphic Designer</b> part time, and <b>Assistant Resident Director</b> for my residence hall full time.
-                </p>
-                <p>Outside of CS, I am very passionate about graphic design and music.</p>
-                <p>This webpage serves as a portfolio for some of my personal and academic projects.</p>
-                <p>If you're interested in hiring me, you can send me a message through <a target="_blank" href="https://www.linkedin.com/in/nathan-tompkins-396957180">LinkedIn</a>.</p>
-            </div>
-            <div class="sect" id="port">
-                <h1>Portfolio</h1>
-                <p>Content coming soon!</p>
+	        <h1><i>Hey, I'm not one for lengthy introductions.</i></h1>
+                <p><b>My name is Nathan and I spend a lot of time working with computers.</b></p>
+                <p>I am currently interning at Garmin in Olathe, Kansas. I'm working on embedded systems and automation in the Automotive OEM department.
+		At university, I lead the ACM chapter and tutor students in CS.
+                When I'm not focusing on CS, I spend a lot of time reading about graphic design and exploring music.
+                <p>If you're interested in getting in touch with me, you can send me a message through <a target="_blank" href="https://www.linkedin.com/in/nathan-tompkins-396957180">LinkedIn</a>.</p>
             </div>
             <div class="sect" id="blog">
                 <h1>Blog</h1>
                 <p>Content coming soon!</p>
-
             </div>
         </div>
         <div id="right">
             <div class="nav">
                 <div id="links">
-                    <a href="#main" onclick="show('main'); mixpanel.track_links('btnMain','Main btn clicked')" id="btnMain">
-                        <span>main </span>!</a>
-                    <a href="#port" onclick="show('port'); mixpanel.track_links('btnPort','Port btn clicked')" id="btnPort">
-                        <span>port </span>:</a>
-                    <a href="#blog" onclick="show('blog'); mixpanel.track_links('btnBlog','Blog btn clicked')" id="btnBlog">
-                        <span>blog</span>.</a>
+                    <a href="#blog" onclick="show('blog');" id="btnBlog">
+                    <span>blog</span>.</a>
                 </div>
-
                 <div id="social">
-                    <a target="_blank" href="https://github.com/ntompkins" onclick="mixpanel.track_links('githubLink','Github clicked')" id="githubLink">
+                    <a target="_blank" href="https://github.com/ntompkins" id="githubLink">
                         <i class="fab fa-github-square fa-2x"></i>
                     </a>
-                    <a target="_blank" href="https://www.linkedin.com/in/nathan-tompkins-396957180" onclick="mixpanel.track_links('linkedinLink','LinkedIn clicked')" id="linkedinLink">
+                    <a target="_blank" href="https://www.linkedin.com/in/nathan-tompkins-396957180" id="linkedinLink">
                         <i class="fab fa-linkedin fa-2x"></i>
                     </a>
-                    <a target="_blank" href="https://dribbble.com/ntompkins" onclick="mixpanel.track_links('dribbbleLink','Dribbble clicked')" id="dribbbleLink">
+                    <a target="_blank" href="https://dribbble.com/ntompkins" id="dribbbleLink">
                         <i class="fab fa-dribbble-square fa-2x"></i>
                     </a>
                 </div>
-
                 <div id="copy">
                     Property of Nathan Tompkins
                 </div>
@@ -253,7 +56,6 @@
     </div>
 </body>
 <script type="text/javascript">  
-    analytics.page();
     var thisDiv = document.getElementById("main");
         function show(divID) {
             var div = document.getElementById(divID);
@@ -262,5 +64,4 @@
             thisDiv = div;
         }
 </script>
-
 </html>
