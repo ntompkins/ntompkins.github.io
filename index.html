@@ -10,6 +10,7 @@
    document.documentElement.classList.remove('no-js');
    document.documentElement.classList.add('js');
   </script>
+  <base href="https://ntompkins.co">
   <link href="css/style.min.css" rel="stylesheet"/>
   <meta content="Personal site of Nathan Tompkins." name="description"/>
   <meta content="ntompkins." property="og:title"/>
@@ -26,22 +27,31 @@
    <a href="https://ntompkins.co/">
     <img id="logo" src="imgs/logo/logo.svg"/>
    </a>
+   <nav class="nav-links">
+     <a href="/about.html">ABOUT</a>
+     <details>
+      <summary>SOCIAL</summary>
+      <ul>
+        <li><a href="mailto:hello@ntompkins.co" target="_blank">email</a></li>
+        <li><a href="https://matrix.to/#/@ntompkins:matrix.org" target="_blank">matrix</a></li>
+        <li><a href="https://github.com/ntompkins" target="_blank">github</a></li>
+      </ul>
+     </details>
+   </nav>
   </div>
-  <article class="about-page">
-   <p class="big-text bold">
-    You found me!
-   </p>
-   <p class="big-text bold">
-    I'm Nathan, I work with computers, and most of the time I even enjoy it.
-   </p>
-   <p class="big-text bold">
-    There's not a lot here yet, but I'll be adding articles and projects before too long.
-   </p>
-   <p class="big-text bold">
-  Thanks for stopping by!
-   </p>
-  </article>
-  <img class="colophon" src="imgs/ui/colophon.svg">
-  </img>
+  <main>
+    <article class="about-page">
+    <p class="big-text bold">
+      You found me!
+    </p>
+    <p class="big-text bold">
+      I&rsquo;m Nathan. I work with computers a lot (and sometimes I even enjoy it).
+    </p>
+    <a href="/about.html" class="internal-link big-text bold">More about me &rarr;</a>
+    <p class="big-text bold">
+      There&rsquo;s not a lot here yet, but I&rsquo;ll be adding articles and projects before too long. Hopefully.
+    </p>
+    </article>
+  </main>
  </body>
 </html>
