@@ -1,0 +1,3 @@
+[submodule "bricolage"]
+	path = bricolage
+	url = https://github.com/ateliertriay/bricolage.git
