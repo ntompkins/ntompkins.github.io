@@ -5,7 +5,6 @@
     font-stretch: 75% 125%;
     font-style: normal;
 }
-
 html, body {
     padding: 0;
     margin: 0;
@@ -19,15 +18,15 @@ html, body {
 	font-family: "BricolageGrotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
     }
 }
-
 body {
-    color: #111;
-    background-color: #fff;
+    color: #FEC5CF;
+    background-color: #553E5E;
 }
 @media only screen and (max-width:985px) {
     .about-page {
-    max-width: 85%;
-    margin: 0 auto;
+        max-width: 85%;
+        margin: 0 auto;
+    }
 }
 .big-text {
     font-size: 2.5rem;
@@ -43,17 +42,18 @@ body {
 }
 .nav-links>a {
     margin: .5rem;
-    color: #888;
+    color: #86A5D9;
     text-decoration: none;
     border-bottom: 3px solid transparent;
 }
-}@media only screen and (min-width:986px) {
+@media only screen and (min-width:986px) {
     .about-page {
-    max-width: 65%;
-    margin: 0 auto;
+        max-width: 65%;
+        margin: 0 auto;
+    }
 }
 .big-text {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 .navigation {
     max-width: 65%;
@@ -66,11 +66,11 @@ body {
 }
 .nav-links>a {
     margin: 8%;
-    color: #888;
+    color: #86A5D9;
     text-decoration: none;
     border-bottom: 3px solid transparent;
 }
-}.noselect {
+.noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -82,63 +82,53 @@ body {
     font-weight: 800;
 }
 .bold {
-    font-weight: 700;
-}
-#logo {
-    transition: ease all .3s;
-}
-#logo:hover {
-    transform: translate3d(1px, -1px, 0);
-    filter: drop-shadow(-3px 3px 0 #111);
+    font-weight: 900;
 }
 .nav-links {
-    font-weight: 700;
+    font-weight: 900;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .nav-links a {
-    border-bottom: 3px solid transparent;
     text-decoration: none;
     align-self: center;
 }
 .nav-links a:hover {
-    color: #111;
-    border-bottom: 3px solid #111;
+    text-decoration: underline;
 }
 .nav-links details {
     margin: 0;
     padding: 0;
-    color: #888;
+    color: #86A5D9;
     align-self: center;
     border-bottom: 3px solid transparent;
 }
 .nav-links details>summary:hover {
     margin: 0;
     padding: 0;
-    color: #111;
     cursor: pointer;
+    text-decoration: underline;
 }
 .nav-links ul {
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0.3rem 1rem;
     line-height: 1.8;
     list-style: none;
     position: absolute;
-    background-color: #fff;
-    border: 3px solid #111;
 }
 .nav-links ul li a {
-    color: #888;
+    color: #86A5D9;
 }
 .nav-link-active {
     border-bottom: 3px solid #aaa;
 }
 .internal-link {
-    color: inherit;
+    color: #86A5D9;
+    text-decoration: none;
 }
 .internal-link:hover {
-    background: #fc6;
+    text-decoration: underline;
 }
 .article-title>a {
     text-decoration: none;
@@ -149,23 +139,58 @@ body {
     max-width: 50rem;
     padding: 0 1rem 10rem;
 }
-.article-metadata {
-    color: #7d7d7d;
-    font-size: 1rem;
+.content > nav {
+    font-weight: 700;
+    font-size: 1.3rem;
 }
-.author {
-    display: inline;
+.content > nav a {
+    margin: 0 2rem 0 0;
 }
 .content article {
     font-size: 1.4rem;
     line-height: 1.4;
     max-width: 80rem;
 }
+.content article p:first-of-type {
+    font-weight: 900;
+    font-size: 1rem;
+}
+.content hr {
+    color: #FEC5CF;
+}
+.crumbs {
+    font-family: monospace;
+}
+.crumbs ol {
+    list-style-type: none;
+    padding-left: 0;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+.crumb {
+    display: inline-block;
+    font-size: 1rem;
+}
+.crumb a {
+    color: #86A5D9; 
+}
+.crumb a::after {
+    display: inline-block;
+    color: #FEC5CF;
+    content: '>';
+    font-size: 80%;
+    padding: 0 0.5rem 0 1rem;
+    margin: 0;
+}
+.crumb:last-child ::after {
+    content: '';
+}
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
-    font-weight: 700;
+    font-weight: 900;
 }
 .content a {
-    color: #007bff;
+    color: #86A5D9;
     text-decoration: none;
 }
 .content a:hover {
