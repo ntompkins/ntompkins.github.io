@@ -1,1 +1,0 @@
-This repository houses the source code for [my website](https://ntompkins.co).
